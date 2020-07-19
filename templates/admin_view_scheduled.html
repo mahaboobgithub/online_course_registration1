@@ -1,0 +1,24 @@
+{% extends "common.html" %}
+{% block mahaboob %}
+    {% include "admin_home.html" %}
+    <table border="2" align="center">
+     <tr>
+        <th><h3>Course name</h3></th>
+        <th><h3>Faculty</h3></th>
+        <th><h3>Date</h3></th>
+        <th><h3>Time</h3></th>
+        <th><h3>Fee</h3></th>
+         <th><h3>Duration in days</h3></th>
+    </tr>
+        {% for x in object_list %}
+    <tr>
+        <th>{{ x.course_name }}</th>
+        <th>{{ x.faculty }}</th>
+        <th>{{ x.date }}</th>
+        <th>{{ x.time }}</th>
+        <th>{{ x.fee }}</th>
+        <th>{{ x.duration }}</th>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

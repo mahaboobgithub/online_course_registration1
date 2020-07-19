@@ -1,0 +1,28 @@
+<style>
+    #tbl{
+        display: inline-block;
+    }
+</style>
+{% extends "common.html" %}
+{% block mahaboob %}
+    {% include "studentpage_design.html" %}
+    <table align="center" border="2">
+    <tr>
+        <th><h1>    Available Courses</h1></th>
+    </tr>
+    <tr><th>
+        {% for x in object_data %}
+            <table  id=tbl border="1" align="center" >
+            <tr><th>Course:{{ x.course_name }}</th></tr>
+            <tr><th>Date:{{ x.date }}</th></tr>
+            <tr><th>Faculty:{{ x.faculty }}</th></tr>
+            <tr><th>Time:{{ x.time }}</th></tr>
+            <tr><th>Fee:{{ x.fee }}</th></tr>
+            <tr><th>Duration:{{ x.duration }}days</th></tr>
+            </table>
+
+        {% endfor%}
+    </th></tr>
+    </table>
+
+{% endblock %}

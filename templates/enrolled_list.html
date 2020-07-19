@@ -1,0 +1,13 @@
+{%extends "common.html"%}
+{% block mahaboob %}
+    {% include "welcomestudentdesign.html" %}
+    <table align="center" border="2">
+    {% for x in obj%}
+    <tr><th data-model-name="t">
+        {{ x.course_name }}
+    </th>
+
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

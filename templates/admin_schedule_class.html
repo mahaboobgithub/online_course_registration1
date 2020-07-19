@@ -1,0 +1,21 @@
+{% extends "common.html" %}
+{%block mahaboob %}
+    {% include "admin_home.html" %}
+    <form action="{% url "save_scheduled_class" %}" method="post">{% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+
+            {{ form }}
+
+        </tr>
+    <tr><th colspan="2"><button type="submit">Submit</button> </th></tr>
+        <tr><th colspan="2">
+            {%for x in messages%}
+                {{ x }}
+            {% endfor %}
+        </th>
+        </tr>
+    </table>
+
+    </form>
+{% endblock %}

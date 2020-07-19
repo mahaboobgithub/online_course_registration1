@@ -1,0 +1,25 @@
+<style>
+
+</style>
+{% extends "common.html" %}
+{% block mahaboob %}
+    {% include "studentpage_design.html" %}
+    <form action="{% url "studentform_check" %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+    <tr>
+        <th colspan="2" ><h1>Student Registration Form</h1></th>
+
+    </tr>
+    <tr>{{ form }}</tr>
+        <tr><th colspan="2"><button type="submit">Submit</button> </th></tr>
+        <tr>
+            <th>
+                {% for x in messages %}
+                    {{ x }}
+                {% endfor %}
+            </th>
+        </tr>
+    </table>
+    </form>
+{% endblock %}

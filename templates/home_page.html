@@ -1,0 +1,27 @@
+
+<head>
+    <style>
+        #admin
+        {
+            font-family: "Agency FB";
+            font-size: 15px;
+            color: #2f2f9c;
+        }
+
+    </style>
+</head>
+{% extends 'common.html' %}
+
+{% block mahaboob %}
+
+    <table border="2" align="center" >
+
+    <tr>
+        <th width="500px">
+            <a href="{% url "home" %}"> <h1>Admin</h1></a>
+        </th >
+        <th width="500px"><a href="{% url "student_page" %}"><h1>Student</a></th>
+    </tr>
+
+    </table>
+{% endblock %}

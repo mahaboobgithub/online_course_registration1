@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    <style>
+
+        #header
+        {
+            font-family: "sans-serif";
+            color: darkred;
+            font-size: 35px;
+
+        }
+    </style>
+
+</head>
+<body>
+<table border="2" align="center" width="1000">
+    <tr>
+        <th  id="header"><a href="{% url "home_page" %}">SATYA TECH Online Course Regestration</a></th>
+    </tr>
+    <tr>
+
+        <tr>
+            {% block mahaboob %}
+            {% endblock %}
+        </tr>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
